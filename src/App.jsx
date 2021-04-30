@@ -1,6 +1,8 @@
 import './App.css'
 import React from 'react'
 
+import UsuarioInfo from './components/condicional/UsuarioInfo'
+import ParOuImpar from './components/condicional/ParOuImpar'
 import Tabela from './components/repeticao/Tabela'
 import ListaAlunos from './components/repeticao/ListaAlunos'
 import Familia from './components/basicos/Familia'
@@ -16,19 +18,24 @@ export default _ =>
     <div className="App">
         <h1>Fundamentos React.js (Arrow) </h1>
         <div className="Cards">
-        <Card titulo="#07 Desafio Repetição " color="#FF7F50D">
-                <Tabela/>
+            <Card titulo="#08 Renderização Condicional " color="#6082B6">
+                <ParOuImpar numero={12}></ParOuImpar>
+                <UsuarioInfo usario={{}} />
+                {/* <UsuarioInfo usario={{email:'di@go.com'}}/> */}
+            </Card>
+            <Card titulo="#07 Desafio Repetição " color="#FF7F50D">
+                <Tabela />
             </Card>
             <Card titulo="#06 Repetição" color="#6495ED">
-                <ListaAlunos/>
+                <ListaAlunos />
             </Card>
             <Card titulo="#05 Componentes com Filhos" color="#DE3163">
                 <Familia sobrenome="Alves" />
-                    <FamiliaMenbro nome="Diogo"/>
-                    <FamiliaMenbro nome="Danilo"/>
-                    <FamiliaMenbro nome="Daniel"/>
-                    <FamiliaMenbro nome="Anderson"/>
-                    
+                <FamiliaMenbro nome="Diogo" />
+                <FamiliaMenbro nome="Danilo" />
+                <FamiliaMenbro nome="Daniel" />
+                <FamiliaMenbro nome="Anderson" />
+
             </Card>
             <Card titulo="#04 Desafio Aleatorio" color="#6495ED">
                 <Aleatorio min={1} max={100} />
