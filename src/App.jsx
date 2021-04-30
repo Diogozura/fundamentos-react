@@ -1,6 +1,7 @@
 import './App.css'
 import React from 'react'
 
+import DiretaPai from './components/comunicacao/DiretaPai'
 import UsuarioInfo from './components/condicional/UsuarioInfo'
 import ParOuImpar from './components/condicional/ParOuImpar'
 import Tabela from './components/repeticao/Tabela'
@@ -18,6 +19,9 @@ export default _ =>
     <div className="App">
         <h1>Fundamentos React.js (Arrow) </h1>
         <div className="Cards">
+        <Card titulo="#09 Comunicação Direta " color="#FA26D7">
+                <DiretaPai/>
+            </Card>
             <Card titulo="#08 Renderização Condicional " color="#6082B6">
                 <ParOuImpar numero={12}></ParOuImpar>
                 <UsuarioInfo usario={{}} />
