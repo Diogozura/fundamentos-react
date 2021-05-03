@@ -1,6 +1,11 @@
 import './App.css'
 import React from 'react'
 
+import Card from './components/layout/Card'
+
+import Contador from './components/contador/contador'
+import Input from './components/formulario/Input'
+import IndiretaPai from './components/comunicacao/IndiretaPai'
 import DiretaPai from './components/comunicacao/DiretaPai'
 import UsuarioInfo from './components/condicional/UsuarioInfo'
 import ParOuImpar from './components/condicional/ParOuImpar'
@@ -8,19 +13,29 @@ import Tabela from './components/repeticao/Tabela'
 import ListaAlunos from './components/repeticao/ListaAlunos'
 import Familia from './components/basicos/Familia'
 import FamiliaMenbro from './components/basicos/FamiliaMenbro'
-import Card from './components/layout/Card'
 import Primeiro from './components/basicos/Primeiro.jsx'
 import Segundo from './components/basicos/comParametro.jsx'
 import Fragmento from './components/basicos/Fragmento'
 import Aleatorio from './components/basicos/Aleatorio'
+
+
 
 export default _ =>
 
     <div className="App">
         <h1>Fundamentos React.js (Arrow) </h1>
         <div className="Cards">
-        <Card titulo="#09 Comunicação Direta " color="#FA26D7">
-                <DiretaPai/>
+            <Card titulo="#12 Contador" color="#000080">
+                <Contador numeroInicial={10}></Contador>
+            </Card>
+            <Card titulo="#11 Componente Controlado(Input) " color="#00FF00">
+                <Input></Input>
+            </Card>
+            <Card titulo="#10 Comunicação Indireta " color="#7FB3D5">
+                <IndiretaPai />
+            </Card>
+            <Card titulo="#09 Comunicação Direta " color="#FA26D7">
+                <DiretaPai />
             </Card>
             <Card titulo="#08 Renderização Condicional " color="#6082B6">
                 <ParOuImpar numero={12}></ParOuImpar>
@@ -62,5 +77,5 @@ export default _ =>
 
 
 
-    </div>
+    </div >
 
